@@ -10,10 +10,11 @@
         "Techmeme": "https://www.techmeme.com/feed.xml",
         "CIO Dive": "https://www.ciodive.com/feeds/news/",
         "EDUCAUSE": "https://er.educause.edu/rss",
-        "WSJ Tech": "https://feeds.content.wsj.com/wsj/xml/rss/3_7014.xml",
-        "Semafor Tech": "https://www.semafor.com/feed/tech.rss",
+        "WSJ Tech": "https://feeds.content.dowjones.io/public/rss/RSSWSJD",
+        "Semafor Tech": "https://www.semafor.com/rss.xml",
         "The Verge AI": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
         "Microsoft AI Blog": "https://blogs.microsoft.com/ai/feed/",
+        "Ethan Mollick": "https://www.oneusefulthing.org/feed",
         "r/ClaudeAI": "https://www.reddit.com/r/ClaudeAI/.rss",
         "r/claudecode": "https://www.reddit.com/r/claudecode/.rss",
         "r/LocalLLaMA": "https://www.reddit.com/r/LocalLLaMA/.rss",
@@ -23,7 +24,9 @@
     "weekly_sources": {
         "TWIML": "https://twimlai.com/feed/",
         "Stratechery": "https://stratechery.com/feed/",
-        "MLOps Community": "https://mlops.community/feed/"
+        "MLOps Community": "https://mlops.community/feed/",
+        "No Priors": "https://feeds.megaphone.fm/nopriors",
+        "Latent Space": "https://www.latent.space/feed"
     },
 
     "relevance_keywords": {
