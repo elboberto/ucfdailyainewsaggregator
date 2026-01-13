@@ -1,0 +1,108 @@
+{
+    "settings": {
+        "min_relevance_score": 5,
+        "max_articles_per_source": 10,
+        "max_articles_total": 25,
+        "lookback_hours": 24
+    },
+
+    "daily_sources": {
+        "Techmeme": "https://www.techmeme.com/feed.xml",
+        "CIO Dive": "https://www.ciodive.com/feeds/news/",
+        "EDUCAUSE": "https://er.educause.edu/rss",
+        "WSJ Tech": "https://feeds.content.wsj.com/wsj/xml/rss/3_7014.xml",
+        "Semafor Tech": "https://www.semafor.com/feed/tech.rss",
+        "The Verge AI": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+        "Microsoft AI Blog": "https://blogs.microsoft.com/ai/feed/",
+        "r/ClaudeAI": "https://www.reddit.com/r/ClaudeAI/.rss",
+        "r/claudecode": "https://www.reddit.com/r/claudecode/.rss",
+        "r/LocalLLaMA": "https://www.reddit.com/r/LocalLLaMA/.rss",
+        "r/LLMDevs": "https://www.reddit.com/r/LLMDevs/.rss"
+    },
+
+    "weekly_sources": {
+        "TWIML": "https://twimlai.com/feed/",
+        "Stratechery": "https://stratechery.com/feed/",
+        "MLOps Community": "https://mlops.community/feed/"
+    },
+
+    "relevance_keywords": {
+        "_comment": "Higher numbers = more relevant. Adjust weights to tune signal.",
+        
+        "enterprise ai": 10,
+        "foundry": 9,
+        "generative ai": 8,
+        "ai strategy": 10,
+        "ai policy": 10,
+        "ai governance": 9,
+        "responsible ai": 8,
+        "ai deployment": 9,
+        "ai implementation": 8,
+        "llm": 7,
+        "large language model": 7,
+        "gpt": 6,
+        "claude": 8,
+        "copilot": 7,
+
+        "higher education": 12,
+        "university": 10,
+        "academic": 8,
+        "campus": 8,
+        "student": 6,
+        "faculty": 7,
+        "research": 5,
+        "educause": 12,
+
+        "cio": 8,
+        "it infrastructure": 7,
+        "data center": 6,
+        "cloud": 5,
+        "azure": 6,
+        "microsoft": 6,
+        "security": 5,
+        "compliance": 7,
+        "vendor": 5,
+        "licensing": 6,
+        "procurement": 6,
+
+        "regulation": 8,
+        "policy": 7,
+        "executive order": 9,
+        "state law": 8,
+        "florida": 10,
+        "public sector": 8,
+        "government": 6,
+        "ethics": 6,
+        "bias": 5,
+        "privacy": 6,
+        "data protection": 6,
+
+        "digital transformation": 7,
+        "roi": 6,
+        "business case": 7,
+        "board": 6,
+        "trustees": 8,
+        "leadership": 5,
+        "workforce": 6,
+        "training": 5,
+        "adoption": 6,
+
+        "integration": 5,
+        "api": 4,
+        "deployment": 5,
+        "pilot": 6,
+        "production": 5,
+        "mlops": 7,
+        "fine-tuning": 6,
+        "rag": 7,
+        "retrieval": 5
+    },
+
+    "categories": {
+        "Strategy & Leadership": ["strategy", "cio", "leadership", "board", "trustees", "roi", "business case", "digital transformation"],
+        "Policy & Governance": ["policy", "regulation", "governance", "compliance", "ethics", "bias", "privacy", "executive order", "state law"],
+        "Higher Ed Specific": ["higher education", "university", "campus", "student", "faculty", "academic", "educause", "research"],
+        "Enterprise Tech": ["enterprise", "deployment", "implementation", "integration", "infrastructure", "cloud", "azure", "microsoft"],
+        "AI/ML Developments": ["llm", "gpt", "claude", "copilot", "generative ai", "large language model", "fine-tuning", "rag", "mlops"]
+    }
+}
