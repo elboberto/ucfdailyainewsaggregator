@@ -415,7 +415,7 @@ def send_email(html_content: str, text_content: str) -> bool:
         logging.error("Email not configured. Set SENDER_EMAIL, SENDER_PASSWORD, RECIPIENT_EMAIL in Application Settings.")
         return False
     
-    subject = f"🎯 Enterprise AI Briefing - {datetime.now().strftime('%b %d, %Y')}"
+    subject = f"⚔️ UCF Enterprise AI Daily Briefing - {datetime.now().strftime('%b %d, %Y')}"
     
     msg = MIMEMultipart("alternative")
     msg["Subject"] = subject
