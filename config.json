@@ -1,6 +1,6 @@
 {
     "settings": {
-        "min_relevance_score": 5,
+        "min_relevance_score": 7,
         "max_articles_per_source": 10,
         "max_articles_total": 25,
         "lookback_hours": 24
@@ -44,8 +44,8 @@
         "llm": 7,
         "large language model": 7,
         "gpt": 6,
-        "claude": 8,
-        "copilot": 7,
+        "claude": 6,
+        "copilot": 6,
 
         "higher education": 12,
         "university": 10,
