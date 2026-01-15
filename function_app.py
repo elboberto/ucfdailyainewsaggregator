@@ -442,7 +442,7 @@ def send_email(html_content: str, text_content: str) -> bool:
 # =============================================================================
 
 @app.function_name(name="AINewsDigest")
-@app.route(route="trigger", methods=["POST"])
+@app.route(route="trigger", methods=["POST"], auth_level=func.AuthLevel.FUNCTION)
 def AINewsDigest(req: func.HttpRequest) -> func.HttpResponse:
     """Azure Function entry point - triggered by HTTP POST.
     
