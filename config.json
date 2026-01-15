@@ -18,7 +18,8 @@
         "r/ClaudeAI": "https://www.reddit.com/r/ClaudeAI/.rss",
         "r/claudecode": "https://www.reddit.com/r/claudecode/.rss",
         "r/LocalLLaMA": "https://www.reddit.com/r/LocalLLaMA/.rss",
-        "r/LLMDevs": "https://www.reddit.com/r/LLMDevs/.rss"
+        "r/LLMDevs": "https://www.reddit.com/r/LLMDevs/.rss".
+        "r/MistralAI": "https://www.reddit.com/r/MistralAI/.rss"
     },
 
     "weekly_sources": {
