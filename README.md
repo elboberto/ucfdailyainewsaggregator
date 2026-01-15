@@ -48,6 +48,24 @@ func start
 
 Configure the application using `config.json` for application settings.
 
+## Scheduling
+
+The function runs daily at **6 AM ET (11:00 UTC)** via GitHub Actions.
+
+### Setup GitHub Actions Scheduling
+
+1. Get your Azure Function URL:
+   - In Azure Portal → Your Function App → Functions → AINewsDigest → Get Function URL
+   - Copy the URL
+
+2. Add the secret to GitHub:
+   - Go to your repository → Settings → Secrets and variables → Actions
+   - Click "New repository secret"
+   - Name: `FUNCTION_URL`
+   - Value: Paste your function URL (including the function key)
+
+3. The workflow will automatically trigger daily or use the "Run workflow" button to test manually.
+
 ## Deployment
 
 Deploy to Azure using Azure CLI:

@@ -1,0 +1,21 @@
+name: Daily AI News Digest
+
+on:
+  schedule:
+    # Run every day at 6 AM ET (11:00 UTC)
+    - cron: '0 11 * * *'
+  workflow_dispatch:  # Allow manual triggering
+
+jobs:
+  trigger-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger AI News Digest Function
+        run: |
+          curl -X POST \
+            -H "Content-Type: application/json" \
+            -d '{"triggered_by":"github_actions"}' \
+            "${{ secrets.FUNCTION_URL }}"
+
+      - name: Log execution
+        run: echo "AI News Digest triggered at $(date -u +'%Y-%m-%d %H:%M:%S UTC')"

@@ -442,14 +442,15 @@ def send_email(html_content: str, text_content: str) -> bool:
 # =============================================================================
 
 @app.function_name(name="AINewsDigest")
-@app.timer_trigger(schedule="0 0 11 * * *", arg_name="mytimer", run_on_startup=False)
-def AINewsDigest(mytimer: func.TimerRequest) -> None:
-    """Azure Function entry point - triggered by timer at 6 AM ET (11:00 UTC)."""
+@app.route(route="trigger", methods=["POST"])
+def AINewsDigest(req: func.HttpRequest) -> func.HttpResponse:
+    """Azure Function entry point - triggered by HTTP POST.
+    
+    Scheduled via GitHub Actions at 6 AM ET (11:00 UTC) daily.
+    Can also be triggered manually by sending a POST request.
+    """
     
     logging.info('AI News Digest function started.')
-    
-    if mytimer.past_due:
-        logging.info('Timer is past due, running anyway.')
     
     try:
         articles = fetch_all_sources(include_weekly=False)
@@ -458,11 +459,20 @@ def AINewsDigest(mytimer: func.TimerRequest) -> None:
         
         if send_email(html, text):
             logging.info("Daily digest sent successfully.")
+            return func.HttpResponse(
+                "Daily digest sent successfully.",
+                status_code=200
+            )
         else:
             logging.error("Failed to send daily digest.")
+            return func.HttpResponse(
+                "Failed to send daily digest.",
+                status_code=500
+            )
             
     except Exception as e:
         logging.error(f"Function failed: {e}")
-        raise
-    
-    logging.info('AI News Digest function completed.')
+        return func.HttpResponse(
+            f"Function failed: {e}",
+            status_code=500
+        )
