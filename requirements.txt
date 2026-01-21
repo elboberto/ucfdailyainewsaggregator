@@ -1,3 +1,4 @@
 azure-functions
 feedparser
 requests
+numpy
